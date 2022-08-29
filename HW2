@@ -1,0 +1,53 @@
+// Написать программу, которая принимает на вход трёхзначное число 
+// и на выходе показывает вторую цифру этого числа.
+
+Console.Clear();
+int num = new Random().Next(100, 1000);
+System.Console.WriteLine(num);
+int num1 = num / 10;
+if (num1 > 10 && num1 <= 99)
+{
+    Console.Write("Last number: " + Math.Abs(num1) % 10);
+}
+
+// Написать программу, которая выводит третью цифру заданного числа 
+// или сообщает, что третьей цифры нет.
+
+Console.WriteLine("Enter the number: ");
+int number = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(Math.Abs(number));
+while (number > 999)
+{
+    number /= 10;
+}
+if (number > 99)
+{
+    Console.Write("The third digit: ");
+    Console.Write(number % 10);
+}
+else
+{
+    Console.WriteLine("No third digit");
+}
+
+
+// Напишите программу, которая принимает на вход цифру,
+//  обозначающую день недели, и проверяет, является ли этот день выходным.
+
+Console.Write("Enter the number 1-7: ");
+int day = Convert.ToInt32(Console.ReadLine());
+if (day > 0 && day < 8)
+{
+    if (day == 6 || day == 7)
+    {
+        Console.WriteLine("yes, day off");
+    }
+    else
+    {
+        Console.WriteLine("no, working day");
+    }
+}
+else
+{
+    Console.WriteLine("Incorrect number");
+}
